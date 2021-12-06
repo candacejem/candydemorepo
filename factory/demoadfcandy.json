@@ -1,0 +1,9 @@
+{
+	"name": "demoadfcandy",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2497e4d8-5557-4124-ae31-00d0b29f194c",
+		"tenantId": "e9f186bb-e12e-4943-b7d5-56e1e91655c1"
+	}
+}

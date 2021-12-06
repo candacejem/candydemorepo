@@ -1,0 +1,47 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "deletePipeline",
+				"type": "Delete",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "fileDeleted",
+						"value": "all .txt files inside output folder in adfdemocandy"
+					}
+				],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "outputFolderDataset",
+						"type": "DatasetReference"
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "linkedservice_storagedemocandy",
+							"type": "LinkedServiceReference"
+						},
+						"path": "adfdemocandy"
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-11-25T07:44:22Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
